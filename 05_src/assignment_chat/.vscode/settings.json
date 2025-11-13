@@ -1,0 +1,18 @@
+{
+  "mcp.servers": {
+    "energyplus": {
+      "command": "docker",
+      "args": [
+        "run","--rm","-i",
+        "-v","C:\\Users\\scliu\\EnergyPlus-MCP:/epmcp",
+        "-v","${workspaceFolder}\\data\\idfs:/idfs",
+        "-w","/epmcp/energyplus-mcp-server",
+        "energyplus-mcp-dev",
+        "uv","run","python","-m","energyplus_mcp_server.server"
+      ]
+    }
+  },
+
+  "python.defaultInterpreterPath": "C:\\Users\\scliu\\Desktop\\deploying-ai\\deploying-ai-env\\Scripts\\python.exe",
+  "python.terminal.activateEnvironment": true
+}
